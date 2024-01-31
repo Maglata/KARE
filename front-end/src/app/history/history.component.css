@@ -126,3 +126,12 @@ input{
   font-weight:bold;
   line-height:1;
 }
+.frame{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 30%; /* Adjust the width to fit three items in a row */
+  margin: 10px; /* Adjust margin as needed */
+  padding: 10px; /* Adjust padding as needed */
+  border: 1px solid #000;
+}

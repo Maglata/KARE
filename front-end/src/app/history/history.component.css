@@ -126,12 +126,22 @@ input{
   font-weight:bold;
   line-height:1;
 }
-.frame{
+.frame {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 30%; /* Adjust the width to fit three items in a row */
-  margin: 10px; /* Adjust margin as needed */
-  padding: 10px; /* Adjust padding as needed */
-  border: 1px solid #000;
+  width: 30%;
+  margin: 10px;
+  padding: 10px; 
+  border: 1px solid rgb(235, 195, 52);
+  border-radius: 10px;
+}
+
+.frame div {
+  margin-bottom: 10px;
+}
+
+.frame span {
+  font-weight: bold;
+  margin-right: 4px;
 }

@@ -8,13 +8,21 @@
       <div class="frame">
         <div *ngFor="let workout of completedWorkouts">
           <div>
-            <div>{{ workout.id }}</div>
-            <div>{{ workout.workoutName }}</div>
-            <div>{{ formatDate(workout.completionDate) }}</div>
+            <div>
+              <span>Training Id:</span>
+              {{ workout.id }}
+            </div>
+            <div>
+              <span>Name:</span>
+              {{ workout.workoutName }}
+            </div>
+            <div>
+              <span>Date:</span>
+              {{ formatDate(workout.completionDate) }}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-

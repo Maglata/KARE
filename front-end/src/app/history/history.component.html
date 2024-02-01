@@ -2,97 +2,27 @@
   <div class="container">
     <div class="logForm">
       <div class="startupBox">
-        <p> Workout History </p>
+        <p>Workout History</p>
       </div>
-      <!--Bla-->
       <div class="frame">
-        <div *ngFor="let workout of completedWorkouts">
-          <div>
-            <div>
-              <span>Training Id:</span>
-              {{ workout.id }}
-            </div>
-            <div>
-              <span>Name:</span>
-              {{ workout.workoutName }}
-            </div>
-            <div>
-              <span>Date:</span>
-              {{ formatDate(workout.completionDate) }}
-            </div>
-          </div>
+        <div
+          class="history-container"
+          *ngFor="let workout of completedWorkouts"
+        >
+          <p class="history-property">
+            <span class="history-type">Workout:</span>
+            {{ workout.workoutName }}
+          </p>
+          <p class="history-property">
+            <span class="history-type">Completion Date:</span>
+            {{ formatDate(workout.completionDate) }}
+          </p>
+          <p class="history-property">
+            <span class="history-type">Training Id:</span>
+            {{ workout.id }}
+          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<style>
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-
-  .background {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px;
-  }
-  .container {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .logForm {
-    text-align: center;
-  }
-  
-.startupBox {
-    background-color: pink;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-
-  .frame {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 30%;
-    margin: 10px;
-    padding: 10px;
-    border: 4px solid rgb(235, 195, 52);
-    border-radius: 10px;
-  }
-
-  .frame div {
-    margin-bottom: 10px;
-  }
-
-  .frame span {
-    font-weight: bold;
-    margin-right: 4px;
-  }
-
-  .workoutItem {
-    background-color: #f8f8f8;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-  }
-
-  .workoutItem:hover {
-    background-color: #e0e0e0;
-  }
-
-</style>
